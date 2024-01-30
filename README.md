@@ -18,7 +18,7 @@ Se te pedirá ingresar la Access Key ID, Secret Access Key, la región predeterm
 
 ## Creación del cluster de EKS
 Para crear el cluster de EKS, ejecuta el siguiente comando:
-```eksctl create cluster -f cluster-configuration.yaml```
+```eksctl create cluster -f 2.cluster-configuration.yaml```
 Este proceso puede tardar entre 15 a 20 minutos.
 
 ## Verificar el estado del cluster
@@ -41,7 +41,7 @@ Actualiza el kubeconfig para que use el cluster de EKS recién creado. Ejecuta:
 
 ## Aplicar el deployment
 Aplica el deployment ejecutando el siguiente comando:
-```kubectl apply -f deployment.yaml```
+```kubectl apply -f 3.deployment.yaml```
 
 # Visualizar el estado del deployment
 Para visualizar el estado del deployment, utiliza el siguiente comando:
@@ -50,7 +50,7 @@ Para visualizar el estado del deployment, utiliza el siguiente comando:
 
 ## Exponer el deployment a través de un servicio
 Para exponer el deployment mediante un servicio, ejecuta:
-```kubectl apply -f service.yaml```
+```kubectl apply -f 4.service.yaml```
 
 ## Explorar el servicio
 Para explorar el servicio, ejecuta:
