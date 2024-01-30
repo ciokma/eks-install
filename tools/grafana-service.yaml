@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+spec:
+  type: LoadBalancer  # Puedes cambiar a LoadBalancer si tu entorno lo soporta
+  selector:
+    app: grafana
+  ports:
+    - port: 3000  # Puerto de Grafana
+      targetPort: 3000  # Puerto interno de Grafana
