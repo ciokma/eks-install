@@ -1,0 +1,21 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: nginx-cluster
+  region: us-east-1
+
+managedNodeGroups:
+  - name: nginx-ng
+    instanceTypes:
+      - t3a.micro
+      - t3.micro
+      - t3a.small
+      - t3.small
+      - t2.micro
+      - t2.small
+    minSize: 3
+    maxSize: 6
+    desiredCapacity: 4
+    #request for spot instance
+    spot: true
